@@ -1,0 +1,56 @@
+<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 m_t20">
+
+	<div class="row">
+
+		<span class="col-xs-1 col-sm-1 col-md-1">
+			<input #toggleall [checked]="toDoStore.areAllDone()" (click)="toDoStore.toggleAllTo(toggleall.checked)" *ng-if="toDoStore.toDos.size"  type="checkbox" id="toggleall" class="icon-checkbox form-control-inline" />
+			<label for="toggleall" >
+			    <span *ng-if="toDoStore.toDos.size" class='glyphicon glyphicon-2x glyphicon-unchecked unchecked'></span>
+				<span *ng-if="toDoStore.toDos.size" class='glyphicon glyphicon-2x glyphicon-check checked'></span>
+			</label>
+		</span>
+
+		<span class="m_l10 col-xs-8 col-sm-10 col-md-10">
+			<input #newtodo (keyup)="typing($event)" type="text" class="form-control text-box" placeholder="Што Треба?" autofocus="" />
+		</span>
+		<span class="col-xs-2 col-sm-1 col-md-1">
+
+			<span class="pointer glyphicon glyphicon-2x glyphicon-plus" *ng-if="newtodo.value.length" (click)="addToDo(newtodo)"></span>
+		</span>
+	</div>
+
+	<div class="row" *ng-if="toDoStore.toDos.size">
+
+		<div class="todo" *ng-for="#todo of toDoStore.toDos.entries()">
+
+			<span class="col-xs-1 col-sm-1 col-md-1">
+				<input [checked]="todo[1].isDone" (click)="toDoStore.toggleDone(todo[0])" class="icon-checkbox form-control-inline" type="checkbox" [id]="todo[0]">
+				<label [html-for]="todo[0]">
+				    <span class='glyphicon glyphicon-2x glyphicon-unchecked unchecked'></span>
+					<span class='glyphicon glyphicon-2x glyphicon-check checked'></span>
+				</label>
+			</span>
+			<span class="word-wrap m_l10 col-xs-8 col-sm-10 col-md-10" (click)="editToDo(todo[1])">
+				<label [hidden]="todo[1].isEdit" [class.done]="todo[1].isDone" (click)="editToDo(todo[1])">{{ todo[1].text }}</label>
+				<input #edittodo *ng-if="todo[1].isEdit" [value]="todo[1].text" (keyup.enter)="saveEdit(edittodo, todo[0], todo[1])" (keyup.escape)="cancelEdit(todo[1])" type="text" class="form-control text-box" autofocus="" />
+			</span>
+			<span class="col-xs-2 col-sm-1 col-md-1">
+					<span class="pointer glyphicon glyphicon-2x glyphicon-trash" *ng-if="!todo[1].isEdit" (click)="toDoStore.remove(todo[0])"></span>
+					<span class="pointer glyphicon glyphicon-2x glyphicon-floppy-remove" *ng-if="todo[1].isEdit" (click)="cancelEdit(todo[1])"></span>
+			</span>
+			<div class="clearfix"></div>
+
+		</div>
+
+		<div class="row">
+
+			<span class="todo-count col-xs-7 col-sm-9 col-md-9"><strong>{{toDoStore.getNotDone().length}}</strong> {{toDoStore.getNotDone().length === 1 ? 'незавршена ставка' : 'незавршени ставки'}}</span>
+			<span class="col-xs-2 col-sm-1 col-md-1">
+				<button type="button" class="btn btn-link link-button" *ng-if="toDoStore.getDone().length" (click)="toDoStore.removeDone()">избриши завршени</button>
+			</span>
+
+		</div>
+
+	</div>
+
+</div>

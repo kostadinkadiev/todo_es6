@@ -1,0 +1,101 @@
+.row {
+	margin-right: -25px !important;
+	margin-left: -25px !important;
+}
+
+.m_t20 { 
+	margin-top:20px; 
+}
+
+.info{
+	color: #bfbfbf;
+	font-size: 12px;
+	margin: 55px auto 0;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+
+@media only screen and (max-width: 500px) {
+	.text-box {
+		font-size: 18px !important;
+	}
+
+	.todo {
+		padding-top: 5px;
+		font-size: 18px;
+		border-bottom: 1px solid #ededed;
+	}
+
+	.link-button {
+		font-size: 15px !important;
+		font-weight: bold;
+		color: #bfbfbf;
+	}
+
+	.todo-count {
+		color: #bfbfbf;
+		font-size: 13px;
+		padding-left: 30px;
+		padding-top: 10px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	}
+
+	.m_l10 { 
+		margin-left:10px; 
+	}
+
+}
+
+@media only screen and (min-width: 501px) {
+	.text-box {
+		font-size: 20px !important;
+	}
+
+	.todo {
+		padding-top: 10px;
+		font-size: 20px;
+		border-bottom: 1px solid #ededed;
+	}
+
+	.link-button {
+		font-size: 20px !important;
+		font-weight: bold;
+		color: #bfbfbf;
+	}
+
+	.todo-count {
+		color: #bfbfbf;
+		font-size: 18px;
+		padding-left: 30px;
+		padding-top: 5px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	}
+
+}
+
+.glyphicon-2x {
+    font-size: 30px;
+}
+
+.done {
+	color: #d9d9d9;
+	text-decoration: line-through;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.word-wrap{
+	word-wrap: break-word;
+}
+
+/*** custom checkboxes ***/
+
+input[type='checkbox'].icon-checkbox{display:none}
+input[type='checkbox'].icon-checkbox+label .unchecked{display:inline}
+input[type='checkbox'].icon-checkbox+label .checked{display:none}
+input[type='checkbox']:checked.icon-checkbox{display:none}
+input[type='checkbox']:checked.icon-checkbox+label .unchecked{display:none}
+input[type='checkbox']:checked.icon-checkbox+label .checked{display:inline}

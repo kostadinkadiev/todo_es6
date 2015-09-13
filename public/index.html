@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>ES6 | ToDo</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link >
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"> 
+	<link rel="stylesheet" href="todo.css"></link >
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser-polyfill.min.js"></script>
+	<script src="/uuid/uuid.js"></script>
+	<script src="/store/store.min.js"></script>
+
+	<script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.87/traceur-runtime.js"></script>
+	<script src="https://jspm.io/system@0.16.js"></script>
+	<script src="https://code.angularjs.org/2.0.0-alpha.36/angular2.dev.js"></script>
+	
+</head>
+<body>
+
+	<div>
+		<div class="row">
+			<todo-app></todo-app>
+		</div>
+	</div>
+
+	<footer class="info">
+		<p><strong>Инструкции:</p>
+		<p><strong><i>CLICK</i> за ажурирање ставка</p>
+		<p><strong><i>ENTER</i> за зачувување ставка</strong></p>
+		<br /><br />
+		<p>&copy; Костадин Кадиев 2015</p>
+	</footer>
+
+	<script>
+		System.import('app');
+	</script>
+
+</body>
+</html>
