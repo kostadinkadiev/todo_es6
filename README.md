@@ -8,9 +8,8 @@ To run this app locally:
 
     git clone https://github.com/kostadinkadiev/todo_es6
     install Node.js
-    npm install -g grunt-cli
     cd to the repo directory
-    npm install to install Grunt plugins and other npm dependencies
+    npm install to install Grunt and other npm dependencies
     grunt
     node server.js
     browse localhost:1337
