@@ -36,7 +36,7 @@
 			</span>
 			<span class="col-xs-2 col-sm-1 col-md-1">
 					<span class="pointer glyphicon glyphicon-2x glyphicon-trash" *ng-if="!todo[1].isEdit" (click)="toDoStore.remove(todo[0])"></span>
-					<span class="pointer glyphicon glyphicon-2x glyphicon-floppy-remove" *ng-if="todo[1].isEdit" (click)="cancelEdit(todo[1])"></span>
+					<span class="pointer glyphicon glyphicon-2x glyphicon-remove" *ng-if="todo[1].isEdit" (click)="cancelEdit(todo[1])"></span>
 			</span>
 			<div class="clearfix"></div>
 
