@@ -6,14 +6,37 @@ class ToDoStore {
 
 	constructor() {
 		this.toDos = new Map(store.get('es6-todos')) || new Map();
+<<<<<<< HEAD
+
+		for(let [key, value] of this.toDos.entries())
+		{
+			this.toDos.get(key).dueDate = new Date(this.toDos.get(key).dueDate);
+		}
+
+		this.reOrderToDos();
+=======
+>>>>>>> origin/master
   	}
 
   	updateStore() {
 		store.set('es6-todos', this.toDos);
+<<<<<<< HEAD
+		this.reOrderToDos();
+	}
+
+  	add(text, date) {
+
+  		let dateParts = date.split('.');
+  		let newDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0], 
+  			0, 0, 0);
+
+		let todo = new ToDo(text, false, false, newDate);
+=======
 	}
 
   	add(text) {
 		let todo = new ToDo(text);
+>>>>>>> origin/master
 		this.toDos.set(uuid.v4(), todo);
 		this.updateStore();
 	}
@@ -62,6 +85,13 @@ class ToDoStore {
 		return this.toDos.size === this.getDone().length;
 	}
 
+<<<<<<< HEAD
+	reOrderToDos() {
+	    this.toDos = new Map([...this.toDos.entries()]
+	      .sort((a,b) => a[1].dueDate - b[1].dueDate));
+  	}
+=======
+>>>>>>> origin/master
 }
 
 ToDoStore.annotations = [

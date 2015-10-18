@@ -6,6 +6,29 @@ const ENTER = 13;
 class ToDoApp {
 
   constructor() {
+<<<<<<< HEAD
+    this.toDoStore = new ToDoStore();
+
+    $(".date").datetimepicker({
+      format: 'L',
+      //minDate: new Date(new Date() - 24*60*60*1000),
+      locale: 'mk'
+    });
+  }
+
+  typing($event, newdate) {
+    if($event.which === ENTER && $event.target.value.trim() && 
+      newdate.value.trim()) {
+      this.addToDo($event.target, newdate);
+    }
+  }
+
+  addToDo(todo, newdate) {
+    if(todo.value.trim() && newdate.value.trim()) {
+      this.toDoStore.add(todo.value, newdate.value);
+      todo.value = null;
+      newdate.value = null;
+=======
     this.NewToDoText = "";
     this.toDoStore = new ToDoStore();
   }
@@ -20,6 +43,7 @@ class ToDoApp {
     if(todo.value.trim()) {
       this.toDoStore.add(todo.value);
       todo.value = null;
+>>>>>>> origin/master
     }
   }
 
@@ -44,6 +68,16 @@ class ToDoApp {
     }
   }
 
+<<<<<<< HEAD
+  getOverdueDays(date) {
+
+    let today = new Date();
+    let timeDiff = today.getTime() - date.getTime();
+    return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
+  }
+
+=======
+>>>>>>> origin/master
 }
 
 ToDoApp.annotations = [

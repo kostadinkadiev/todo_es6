@@ -18,23 +18,47 @@ var ToDoApp = (function () {
   function ToDoApp() {
     _classCallCheck(this, ToDoApp);
 
+<<<<<<< HEAD
+    this.toDoStore = new _todostore2['default']();
+
+    $(".date").datetimepicker({
+      format: 'L',
+      //minDate: new Date(new Date() - 24*60*60*1000),
+      locale: 'mk'
+    });
+=======
     this.NewToDoText = "";
     this.toDoStore = new _todostore2['default']();
+>>>>>>> origin/master
   }
 
   _createClass(ToDoApp, [{
     key: 'typing',
+<<<<<<< HEAD
+    value: function typing($event, newdate) {
+      if ($event.which === ENTER && $event.target.value.trim() && newdate.value.trim()) {
+        this.addToDo($event.target, newdate);
+=======
     value: function typing($event) {
       if ($event.which === ENTER && $event.target.value.trim()) {
         this.addToDo($event.target);
+>>>>>>> origin/master
       }
     }
   }, {
     key: 'addToDo',
+<<<<<<< HEAD
+    value: function addToDo(todo, newdate) {
+      if (todo.value.trim() && newdate.value.trim()) {
+        this.toDoStore.add(todo.value, newdate.value);
+        todo.value = null;
+        newdate.value = null;
+=======
     value: function addToDo(todo) {
       if (todo.value.trim()) {
         this.toDoStore.add(todo.value);
         todo.value = null;
+>>>>>>> origin/master
       }
     }
   }, {
@@ -60,6 +84,17 @@ var ToDoApp = (function () {
         return this.toDoStore.remove(id);
       }
     }
+<<<<<<< HEAD
+  }, {
+    key: 'getOverdueDays',
+    value: function getOverdueDays(date) {
+
+      var today = new Date();
+      var timeDiff = today.getTime() - date.getTime();
+      return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
+    }
+=======
+>>>>>>> origin/master
   }]);
 
   return ToDoApp;
