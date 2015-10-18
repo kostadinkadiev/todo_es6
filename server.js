@@ -1,18 +1,6 @@
 var express = require('express');
 var app = express();
 
-var options = {
-  dotfiles: 'ignore',
-  etag: false,
-  extensions: ['htm', 'html', 'css'],
-  index: false,
-  maxAge: '1d',
-  redirect: false,
-  setHeaders: function setHeaders(res, path, stat) {
-    res.set('x-timestamp', Date.now());
-  }
-};
-
 app.use(express.static('public'));
 app.use(express.static('build'));
 app.use('/store', express.static(__dirname + '/node_modules/store/'));

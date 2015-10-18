@@ -14,14 +14,12 @@ class ToDoApp {
       locale: 'mk'
     });
   }
-
   typing($event, newdate) {
     if($event.which === ENTER && $event.target.value.trim() && 
       newdate.value.trim()) {
       this.addToDo($event.target, newdate);
     }
   }
-
   addToDo(todo, newdate) {
     if(todo.value.trim() && newdate.value.trim()) {
       this.toDoStore.add(todo.value, newdate.value);
@@ -29,15 +27,12 @@ class ToDoApp {
       newdate.value = null;
     }
   }
-
   editToDo(todo) {
     todo.isEdit = true;
   }
-
   cancelEdit(todo) { 
     todo.isEdit = false; 
   }
-
   saveEdit(edittodo, id, todo) {
     let editedText = edittodo.value.trim();
     todo.isEdit = false;
@@ -50,18 +45,14 @@ class ToDoApp {
       return this.toDoStore.remove(id);
     }
   }
-
   getOverdueDays(date) {
-
     let today = new Date();
     let timeDiff = today.getTime() - date.getTime();
     return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
   }
-
 }
 
 ToDoApp.annotations = [
-
   new Component({
     selector: 'todo-app'
   }), 
@@ -69,7 +60,6 @@ ToDoApp.annotations = [
     templateUrl: 'todoapp.html',
     directives: [NgIf, NgFor]
   })
-
 ];
 
 bootstrap(ToDoApp);
