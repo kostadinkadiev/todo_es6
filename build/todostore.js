@@ -25,7 +25,6 @@ var ToDoStore = (function () {
 		_classCallCheck(this, ToDoStore);
 
 		this.toDos = new Map(store.get('es6-todos')) || new Map();
-<<<<<<< HEAD
 
 		var _iteratorNormalCompletion = true;
 		var _didIteratorError = false;
@@ -56,15 +55,12 @@ var ToDoStore = (function () {
 		}
 
 		this.reOrderToDos();
-=======
->>>>>>> origin/master
 	}
 
 	_createClass(ToDoStore, [{
 		key: 'updateStore',
 		value: function updateStore() {
 			store.set('es6-todos', this.toDos);
-<<<<<<< HEAD
 			this.reOrderToDos();
 		}
 	}, {
@@ -75,13 +71,6 @@ var ToDoStore = (function () {
 			var newDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0], 0, 0, 0);
 
 			var todo = new _todo2['default'](text, false, false, newDate);
-=======
-		}
-	}, {
-		key: 'add',
-		value: function add(text) {
-			var todo = new _todo2['default'](text);
->>>>>>> origin/master
 			this.toDos.set(uuid.v4(), todo);
 			this.updateStore();
 		}
@@ -116,7 +105,6 @@ var ToDoStore = (function () {
 	}, {
 		key: 'removeDone',
 		value: function removeDone() {
-<<<<<<< HEAD
 			var _iteratorNormalCompletion2 = true;
 			var _didIteratorError2 = false;
 			var _iteratorError2 = undefined;
@@ -128,26 +116,12 @@ var ToDoStore = (function () {
 
 					var key = _step2$value[0];
 					var value = _step2$value[1];
-=======
-			var _iteratorNormalCompletion = true;
-			var _didIteratorError = false;
-			var _iteratorError = undefined;
-
-			try {
-
-				for (var _iterator = this.toDos.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-					var _step$value = _slicedToArray(_step.value, 2);
-
-					var key = _step$value[0];
-					var value = _step$value[1];
->>>>>>> origin/master
 
 					if (value.isDone) {
 						this.toDos['delete'](key);
 					}
 				}
 			} catch (err) {
-<<<<<<< HEAD
 				_didIteratorError2 = true;
 				_iteratorError2 = err;
 			} finally {
@@ -158,18 +132,6 @@ var ToDoStore = (function () {
 				} finally {
 					if (_didIteratorError2) {
 						throw _iteratorError2;
-=======
-				_didIteratorError = true;
-				_iteratorError = err;
-			} finally {
-				try {
-					if (!_iteratorNormalCompletion && _iterator['return']) {
-						_iterator['return']();
-					}
-				} finally {
-					if (_didIteratorError) {
-						throw _iteratorError;
->>>>>>> origin/master
 					}
 				}
 			}
@@ -191,7 +153,6 @@ var ToDoStore = (function () {
 		value: function areAllDone() {
 			return this.toDos.size === this.getDone().length;
 		}
-<<<<<<< HEAD
 	}, {
 		key: 'reOrderToDos',
 		value: function reOrderToDos() {
@@ -199,8 +160,6 @@ var ToDoStore = (function () {
 				return a[1].dueDate - b[1].dueDate;
 			}));
 		}
-=======
->>>>>>> origin/master
 	}]);
 
 	return ToDoStore;

@@ -18,16 +18,11 @@
 
 @media only screen and (max-width: 500px) {
 	.text-box {
-<<<<<<< HEAD
 		font-size: 16px !important;
-=======
-		font-size: 18px !important;
->>>>>>> origin/master
 	}
 
 	.todo {
 		padding-top: 5px;
-<<<<<<< HEAD
 		font-size: 16px;
 		border-bottom: 1px solid #ededed;
 	}
@@ -39,25 +34,13 @@
 
 	.link-button {
 		font-size: 13px !important;
-=======
-		font-size: 18px;
-		border-bottom: 1px solid #ededed;
-	}
-
-	.link-button {
-		font-size: 15px !important;
->>>>>>> origin/master
 		font-weight: bold;
 		color: #bfbfbf;
 	}
 
 	.todo-count {
 		color: #bfbfbf;
-<<<<<<< HEAD
 		font-size: 11px;
-=======
-		font-size: 13px;
->>>>>>> origin/master
 		padding-left: 30px;
 		padding-top: 10px;
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -66,10 +49,6 @@
 	.m_l10 { 
 		margin-left:10px; 
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 }
 
 @media only screen and (min-width: 501px) {
@@ -83,13 +62,10 @@
 		border-bottom: 1px solid #ededed;
 	}
 
-<<<<<<< HEAD
 	.todoDate {
 		font-size: 17px;
 	}
 
-=======
->>>>>>> origin/master
 	.link-button {
 		font-size: 20px !important;
 		font-weight: bold;
@@ -111,7 +87,6 @@
 }
 
 .done {
-<<<<<<< HEAD
 	color: #d9d9d9 !important;
 	text-decoration: line-through;
 }
@@ -120,12 +95,6 @@
 	color: red;
 }
 
-=======
-	color: #d9d9d9;
-	text-decoration: line-through;
-}
-
->>>>>>> origin/master
 .pointer {
 	cursor: pointer;
 }

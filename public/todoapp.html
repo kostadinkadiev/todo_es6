@@ -10,7 +10,6 @@
 			</label>
 		</span>
 
-<<<<<<< HEAD
 		<span class="m_l10 col-xs-7 col-sm-7 col-md-7">
 			<input #newtodo (keyup)="typing($event, newdate)" type="text" class="form-control text-box" placeholder="Внесете нова ставка" autofocus="" />
 		</span>
@@ -28,14 +27,6 @@
         	<span class="col-xs-3 col-sm-3 col-md-3">
 				<span class="pointer glyphicon glyphicon-2x glyphicon-plus" *ng-if="newtodo.value.length && newdate.value.length" (click)="addToDo(newtodo, newdate)"></span>
 			</span>
-=======
-		<span class="m_l10 col-xs-8 col-sm-10 col-md-10">
-			<input #newtodo (keyup)="typing($event)" type="text" class="form-control text-box" placeholder="Што Треба?" autofocus="" />
-		</span>
-		<span class="col-xs-2 col-sm-1 col-md-1">
-
-			<span class="pointer glyphicon glyphicon-2x glyphicon-plus" *ng-if="newtodo.value.length" (click)="addToDo(newtodo)"></span>
->>>>>>> origin/master
 		</span>
 	</div>
 
@@ -50,7 +41,6 @@
 					<span class='glyphicon glyphicon-2x glyphicon-check checked'></span>
 				</label>
 			</span>
-<<<<<<< HEAD
 			<span class="word-wrap m_l10 col-xs-7 col-sm-7 col-md-7" (click)="editToDo(todo[1])">
 				<label [hidden]="todo[1].isEdit" [class.done]="todo[1].isDone" [class.overdue]="getOverdueDays(todo[1].dueDate) > 0" (click)="editToDo(todo[1])">{{ todo[1].text }} {{ getOverdueDays(todo[1].dueDate) > 0 ? getOverdueDays(todo[1].dueDate) === 1 ? '- 1 ден задоцнета' : '- ' + getOverdueDays(todo[1].dueDate).toString() + ' денa задоцнета' : '' }}</label>
 				<input #edittodo *ng-if="todo[1].isEdit" [value]="todo[1].text" (keyup.enter)="saveEdit(edittodo, todo[0], todo[1])" (keyup.escape)="cancelEdit(todo[1])" type="text" class="form-control text-box" autofocus="" />
@@ -63,15 +53,6 @@
 					<span class="pointer glyphicon glyphicon-2x glyphicon-trash" *ng-if="!todo[1].isEdit" (click)="toDoStore.remove(todo[0])"></span>
 					<span class="pointer glyphicon glyphicon-2x glyphicon-remove" *ng-if="todo[1].isEdit" (click)="cancelEdit(todo[1])"></span>
                 </span>
-=======
-			<span class="word-wrap m_l10 col-xs-8 col-sm-10 col-md-10" (click)="editToDo(todo[1])">
-				<label [hidden]="todo[1].isEdit" [class.done]="todo[1].isDone" (click)="editToDo(todo[1])">{{ todo[1].text }}</label>
-				<input #edittodo *ng-if="todo[1].isEdit" [value]="todo[1].text" (keyup.enter)="saveEdit(edittodo, todo[0], todo[1])" (keyup.escape)="cancelEdit(todo[1])" type="text" class="form-control text-box" autofocus="" />
-			</span>
-			<span class="col-xs-2 col-sm-1 col-md-1">
-					<span class="pointer glyphicon glyphicon-2x glyphicon-trash" *ng-if="!todo[1].isEdit" (click)="toDoStore.remove(todo[0])"></span>
-					<span class="pointer glyphicon glyphicon-2x glyphicon-remove" *ng-if="todo[1].isEdit" (click)="cancelEdit(todo[1])"></span>
->>>>>>> origin/master
 			</span>
 			<div class="clearfix"></div>
 
@@ -88,9 +69,5 @@
 
 	</div>
 
-<<<<<<< HEAD
 </div>
 
-=======
-</div>
->>>>>>> origin/master

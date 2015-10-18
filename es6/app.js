@@ -6,7 +6,6 @@ const ENTER = 13;
 class ToDoApp {
 
   constructor() {
-<<<<<<< HEAD
     this.toDoStore = new ToDoStore();
 
     $(".date").datetimepicker({
@@ -28,22 +27,6 @@ class ToDoApp {
       this.toDoStore.add(todo.value, newdate.value);
       todo.value = null;
       newdate.value = null;
-=======
-    this.NewToDoText = "";
-    this.toDoStore = new ToDoStore();
-  }
-
-  typing($event) {
-    if($event.which === ENTER && $event.target.value.trim()) {
-      this.addToDo($event.target);
-    }
-  }
-
-  addToDo(todo) {
-    if(todo.value.trim()) {
-      this.toDoStore.add(todo.value);
-      todo.value = null;
->>>>>>> origin/master
     }
   }
 
@@ -68,7 +51,6 @@ class ToDoApp {
     }
   }
 
-<<<<<<< HEAD
   getOverdueDays(date) {
 
     let today = new Date();
@@ -76,8 +58,6 @@ class ToDoApp {
     return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
   }
 
-=======
->>>>>>> origin/master
 }
 
 ToDoApp.annotations = [
